@@ -75,7 +75,7 @@ def find_available_slots(date_str, guests, duration_minutes=DEFAULT_MEAL_DURATIO
         return []
     
     available_slots = []
-    possible_times = ["12:00", "12:45", "13:30","19:00,"19:45" ,"20:30", 21:15"]
+    possible_times = ["12:00", "12:45", "13:30","19:00","19:45" ,"20:30", "21:15"]
     
     for time_str in possible_times:
         start_datetime = datetime.fromisoformat(f"{date_str}T{time_str}:00")
