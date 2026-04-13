@@ -17,9 +17,9 @@ def check_availability():
     Vérifie les créneaux disponibles pour une date et un nombre de couverts.
     """
     try:
-        data = request.get_json()
+        data = request.get_json(silent=True) or {}
         
-        date_str = data.get('date') or data.get('preferredDate')
+        date_str = (data or {}).get('date') or request.args.get('date')
         guests = data.get('guests', 2)
         
         if not date_str:
