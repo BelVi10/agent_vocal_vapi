@@ -83,7 +83,7 @@ def find_available_slots(date_str, guests, duration_minutes=DEFAULT_MEAL_DURATIO
         
         if time_str < "14:00" and end_datetime.time() > datetime.strptime("14:00", "%H:%M").time():
             continue
-        if time_str >= "19:00" and end_datetime.time() > datetime.strptime("22:30", "%H:%M").time():
+        if time_str >= "19:00" and end_datetime.time() > datetime.strptime("22:00", "%H:%M").time():
             continue
         
         start_iso = start_datetime.isoformat() + '+02:00'
